@@ -34,6 +34,10 @@ const Home: React.FC = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <h1>Get ERC721 Metadata</h1>
+        <p>
+          Paste the Token Address and TokenID, we'll fetch the TokenURI for you
+        </p>
         <form onSubmit={handleSubmit}>
           <label htmlFor="Address">
             Address
@@ -51,7 +55,7 @@ const Home: React.FC = () => {
           </label>
           <button type="submit">Find out</button>
         </form>
-        {tokenId && (
+        {tokenUri && (
           <div>
             <h3>Result:</h3>
             <pre>{tokenUri}</pre>
